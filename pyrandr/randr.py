@@ -176,6 +176,7 @@ class Screen(object):
                 raise ValueError('Invalid rotation value',
                                  rot, self.set.rotation)
             cmd.extend(['--rotate', rot])
+            self.rotation = self.set.rotation
             has_changed = True
 
         if self.set.position:
